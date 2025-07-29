@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>J.design portfolio</title>
+  </head>
+
+  <body>
+    <nav class="menu">
+      <div></div>
+      <button id="header-button" class="menu-button">J.DESIGN</button>
+      <button id="projects-button" class="menu-button">Projects</button>
+      <button id="contact-button" class="menu-button">Contact</button>
+      <div></div>
+    </nav>
+    <div class="wrap">
+      <div id="skipmenu" class="skip-menu">
+        <a href="#maincontent" class="skip-link">skip to content</a>
+      </div>
+      <div class="scroll-watcher"></div>
+
+      <main id="maincontent">
+        <div id="header">
+          <div></div>
+          <div id="logoholder">
+            <img src="images/Jdesign logo white.svg" alt="J.design logo" />
+          </div>
+          <div id="portraitholder">
+            <img id="slideshow-portrait" src="images/Jay.png" alt="Portrait" />
+          </div>
+          <div id="bio-container">
+            <div class="bio-header">
+              <h2>bio</h2>
+              <button id="bio-dropdown-button" class="accordion-btn">
+                <img
+                  src="images/wedge-dropdown.svg"
+                  alt="wedge-dropdown picto"
+                />
+              </button>
+            </div>
+            <div id="accordion-content" class="accordion-content">
+              <ul id="bio-list">
+                <li class="bio-list-item">
+                  <p>
+                    Multidisciplinary designer <br />
+                    (graphic / industrial / motion-videoedit / front-end dev)
+                  </p>
+                </li>
+                <li class="bio-list-item">
+                  <p>BcA. – Ind.Des. – UTB Zlin</p>
+                </li>
+                <li class="bio-list-item">
+                  <p>2y production in customized clothing</p>
+                </li>
+                <li class="bio-list-item">
+                  <p>5y graphic/expo for pharmaceutical market</p>
+                </li>
+                <li class="bio-list-item">
+                  <p>8 years as Freelancer since UNI</p>
+                </li>
+                <li class="bio-list-item">
+                  <p>
+                    <strong>SOFTSKILLS:</strong> <br />
+                    <strong>2D</strong>_Adobe CC (ID, PS, AI, XD, etc.); MSO
+                    (PPT, Word); CorelDraw; Figma, etc. <br />
+                    <strong>3D</strong>_Rhinoceros; Blender; etc.
+                  </p>
+                </li>
+                <li class="bio-list-item">
+                  <strong>LANGSKILLS:</strong> PRO:CZ/EN BASIC:DE/SK
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="accordion-projects">
+          <div class="accordion-header" id="accordion1-header">
+            <h2>
+              newest <br />
+              projects
+            </h2>
+            <button
+              id="accordion-toggle-button"
+              class="accordion-btn"
+              aria-expanded="false"
+              aria-controls="accordion1-content"
+            >
+              <img
+                src="images/wedge-dropdown.svg"
+                alt="toggle-wedge-dropdown"
+              />
+            </button>
+          </div>
+          <div class="accordion-projects-content" id="accordion1-content">
+            <section id="Newest-projects" aria-label="Newest projects">
+              <div class="carousel" data-carousel>
+                <button
+                  id="carousel-button-previous"
+                  class="carousel-button prev"
+                  data-carousel-button="prev"
+                >
+                  <img
+                    src="images/wedge-previous.svg"
+                    alt="Button previous project"
+                  />
+                </button>
+                <button
+                  id="carousel-button-next"
+                  class="carousel-button next"
+                  data-carousel-button="next"
+                >
+                  <img src="images/wedge-next.svg" alt="Button next project" />
+                </button>
+                <ul data-slides>
+                  <li class="slide" data-active>
+                    <button class="project-cards">
+                      <img src="images/portf/PBS 1 A.png" alt="Ukázka 1" />
+                      <h5> ExpoDes for PBS recruitment process </h5>
+                    </button>
+                  </li>
+                  <li class="slide">
+                    <button class="project-cards">
+                      <img
+                        src="images/portf/JJ-Portf 2025_hlavnijistic.png"
+                        alt="Ukázka 2"
+                      />
+                      <h5> /Logo concept/ for a Punkband </h5>
+                    </button>
+                  </li>
+                  <li class="slide">
+                    <button class="project-cards">
+                      <img
+                        src="images/portf/JJ-Portf 2025_mou2.png"
+                        alt="Ukázka 3"
+                      />
+                      <h5>Socks Company /Banner Designs/</h5>
+                    </button>
+                  </li>
+                  <li class="slide">
+                    <button class="project-cards">
+                      <img
+                        src="images/portf/JJ-Portf 2025_mou1.png"
+                        alt="Ukázka 4"
+                      />
+                      <h5> Socks Designs /sale + B2B/ </h5>
+                    </button>
+                  </li>
+                  <li class="slide">
+                    <button class="project-cards">
+                      <img
+                        src="images/portf/JJ-Portf 2025_jann.png"
+                        alt="Ukázka 5"
+                      />
+                      <h5> Jewelry Brand /Logo/ </h5>
+                    </button>
+                  </li>
+                  <li class="slide">
+                    <button class="project-cards">
+                      <img
+                        src="images/portf/JJ-Portf 2025_zako.png"
+                        alt="Ukázka 5"
+                      />
+                      <h5> Metal Sheets Benders Comp. /Identity Redesign/ </h5>
+                    </button>
+                  </li>
+                  <li class="slide">
+                    <button class="project-cards">
+                      <img
+                        src="images/portf/JJ-Portf 2025_bbf.png"
+                        alt="Ukázka 7"
+                      />
+                      <h5> Bluesband /Visual Identity/ </h5>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <section id="contact-section">
+          <h2>Do you need me to design something?</h2>
+          <button
+            id="contact-section-button"
+            onclick="window.location.href='mailto:j.design.jurca@gmail.com'"
+          >
+            <h3>CONTACT ME!</h3>
+            <br />
+            <img src="images/picto-e-mail black.svg" alt="Mail picto" />
+            <p>via <strong>e-mail</strong> to</p>
+          </button>
+          <div id="email-container"><h3>j.design.jurca@gmail.com</h3></div>
+          <div id="logoholder-contact">
+            <img src="images/Jdesign logo white.svg" alt="J.design logo" />
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
