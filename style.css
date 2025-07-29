@@ -223,6 +223,9 @@ h5 {
 }
 
 #portraitholder img {
+  border-top-right-radius: 3%;
+  border-top-left-radius: 3%;
+  border-bottom-right-radius: 3%;
   border-bottom-left-radius: 50%;
   box-shadow: var(--box-shadow-outer-b);
 }
