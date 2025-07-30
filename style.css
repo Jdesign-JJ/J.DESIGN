@@ -86,6 +86,7 @@ h5 {
 /*SORRY NOT SORRY - NO MOB-VER FIRST*/
 .mobile-message {
   display: none;
+  width: 100vw;
   position: fixed;
   top: 50%;
   left: 50%;
