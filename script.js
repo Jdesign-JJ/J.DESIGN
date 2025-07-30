@@ -1,3 +1,28 @@
+//---mobile sorry message breakpoint---//
+document.addEventListener("DOMContentLoaded", function () {
+  function checkWidth() {
+    const messageElement = document.querySelector(".mobile-message");
+    const contentElements = document.querySelectorAll(".all-content > *");
+    if (window.innerWidth <= 640) {
+      // Zobraz zprávu
+      messageElement.style.display = "block";
+      // Skrýt celý obsah kromě zprávy
+      contentElements.forEach(function (el) {
+        el.style.display = "none";
+      });
+    } else {
+      // Skrýt zprávu
+      messageElement.style.display = "none";
+      // Zobrazit obsah
+      contentElements.forEach(function (el) {
+        el.style.display = "";
+      });
+    }
+  }
+  window.addEventListener("resize", checkWidth);
+  checkWidth();
+});
+
 // --- Funkce na slideshow --- //
 const images = ["images/Jay.png", "images/Jay 1.png", "images/Jay 2.jpg"];
 let currentIndex = 0;
