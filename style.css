@@ -83,6 +83,45 @@ h5 {
   justify-content: center;
 }
 
+/*SORRY NOT SORRY - NO MOB-VER FIRST*/
+.mobile-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--80gray);
+  padding: 3rem;
+  color: var(--white);
+  border-radius: 3rem;
+  box-shadow: var(--box-shadow-outer-b);
+  max-width: 80%;
+  text-align: center;
+  z-index: 9999;
+}
+
+/*SCROLLWATCHER*/
+.scroll-watcher {
+  height: 3px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  width: 100%;
+  background-color: var(--white);
+  width: 100%;
+  scale: 0 1;
+
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
 /*SKIPLINK*/
 .skip-menu {
   max-width: 1920px;
@@ -609,26 +648,4 @@ h5 {
   width: 100%;
   padding: none;
   margin: none;
-}
-
-/*REST*/
-.scroll-watcher {
-  height: 3px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-
-  width: 100%;
-  background-color: var(--white);
-  width: 100%;
-  scale: 0 1;
-
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
-}
-@keyframes scroll-watcher {
-  to {
-    scale: 1 1;
-  }
 }
