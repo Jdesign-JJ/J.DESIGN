@@ -74,7 +74,9 @@ h3 {
 h5 {
   font-weight: 200;
 }
-
+.all-content {
+  width: 100vw;
+]
 .wrap {
   max-width: 100%;
   min-width: 600px;
