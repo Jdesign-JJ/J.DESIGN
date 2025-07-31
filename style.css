@@ -179,6 +179,8 @@ h5 {
   font-family: "Open Sans", system-ui, -apple-system, sans-serif;
   position: relative;
   width: 80%;
+  display: flex;
+  justify-content: center;
   min-width: 80px;
   padding: 0.8rem 1.6rem;
   margin: 0.8rem;
@@ -547,29 +549,6 @@ h5 {
 .project-cards h5 {
   position: absolute;
   display: flex;
-}
-
-.project-card {
-  display: flex;
-  width: 200px;
-  height: auto;
-}
-.projects-card-button {
-  display: flex;
-  width: 80%;
-  border: none;
-  border-radius: var(--box-shadow-none);
-}
-.project-card {
-  display: flex;
-  width: 200px;
-  height: auto;
-}
-.projects-card-button {
-  display: flex;
-  width: 80%;
-  border: none;
-  border-radius: var(--box-shadow-none);
 }
 
 /*CONTACT*/
