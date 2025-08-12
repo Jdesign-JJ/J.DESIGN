@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32px" height="32px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 31.98 31.98"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#FEFEFE}
+    .fil0 {fill:#1F1B20}
+   ]]>
+  </style>
+ </defs>
+ <g id="Vrstva_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="31.98" height="31.98"/>
+  <path class="fil1" d="M9.05 3.84l13.88 0 0 3.47 0 6.94 0 0 0 0c0,7.67 -6.22,13.89 -13.88,13.89l0 -3.47c5.75,0 10.41,-4.67 10.41,-10.42l0 -6.94 -10.41 0 0 -3.47z"/>
+  <path class="fil1" d="M9.05 10.78l6.94 0 0 3.47 0 0c0,3.83 -3.11,6.94 -6.94,6.94l0 -3.54c1.87,0 3.39,-1.52 3.39,-3.4l-3.39 0 0 -3.47z"/>
+ </g>
+</svg>
