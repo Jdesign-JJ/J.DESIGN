@@ -16,14 +16,14 @@
       </h2>
       <h3>I'm sorry for this inconvenience, thanks for understanding.</h3>
     </div>
+    <nav class="menu">
+      <div></div>
+      <button id="header-button" class="menu-button">J.DESIGN</button>
+      <button id="projects-button" class="menu-button">Projects</button>
+      <button id="contact-button" class="menu-button">Contact</button>
+      <div></div>
+    </nav>
     <div class="all-content">
-      <nav class="menu">
-        <div></div>
-        <button id="header-button" class="menu-button">J.DESIGN</button>
-        <button id="projects-button" class="menu-button">Projects</button>
-        <button id="contact-button" class="menu-button">Contact</button>
-        <div></div>
-      </nav>
       <div id="skipmenu" class="skip-menu">
         <a href="#maincontent" class="skip-link">skip to content</a>
       </div>
@@ -100,90 +100,186 @@
               />
             </button>
           </div>
+
           <div class="accordion-projects-content" id="accordion1-content">
-            <section id="Newest-projects" aria-label="Newest projects">
-              <div class="carousel" data-carousel>
+            <div id="carousel-preview-container">
+              <div class="preview-button-holder">
+                <button id="carousel-preview-button-prev">
+                  <img src="images/wedge-previous.svg" alt="Previous project" />
+                </button>
+                <button id="carousel-preview-button-next">
+                  <img src="images/wedge-next.svg" alt="Next project" />
+                </button>
+              </div>
+
+              <ul class="project-preview-list">
+                <li class="preview-card-item">
+                  <button id="PBS-butt" class="project-preview-card">
+                    <img src="images/portf/PBS 1 A.png" alt="" />
+                  </button>
+                  <h5>PBS stall concept</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="MOUMOU-butt" class="project-preview-card">
+                    <img src="images/portf/JJ-Portf 2025_mou1.png" alt="" />
+                  </button>
+                  <h5>Socks designs</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="ANB-butt" class="project-preview-card">
+                    <img src="images/portf/JJ-Portf 2025_abn.png" alt="" />
+                  </button>
+                  <h5>Logo redesign - Car Batteries Dealer</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="HLAVNIJISTIC-butt" class="project-preview-card">
+                    <img
+                      src="images/portf/JJ-Portf 2025_hlavnijistic.png"
+                      alt=""
+                    />
+                  </button>
+                  <h5>Punkband logo Concept</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="JANN-butt" class="project-preview-card">
+                    <img src="images/portf/JJ-Portf 2025_jann.png" alt="" />
+                  </button>
+                  <h5>Project 5</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="JENTERTAINMENT-butt" class="project-preview-card">
+                    <img
+                      src="images/portf/JJ-Portf 2025_jentertainment.png"
+                      alt=""
+                    />
+                  </button>
+                  <h5>Project 6</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="NAOME-butt" class="project-preview-card">
+                    <img
+                      src="images/portf/JJ-Portf 2025_naome-lightbox.png"
+                      alt=""
+                    />
+                  </button>
+                  <h5>Project 7</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="ZAKO-butt" class="project-preview-card">
+                    <img src="images/portf/JJ-Portf 2025_zako.png" alt="" />
+                  </button>
+                  <h5>Project 8</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="BBF-butt" class="project-preview-card">
+                    <img src="images/portf/JJ-Portf 2025_bbf.png" alt="" />
+                  </button>
+                  <h5>Project 9</h5>
+                </li>
+
+                <li class="preview-card-item">
+                  <button id="JURING-butt" class="project-preview-card">
+                    <img src="images/portf/JJ-Portf 2025_juring.png" alt="" />
+                  </button>
+                  <h5>Project 10</h5>
+                </li>
+              </ul>
+            </div>
+            <div class="details-holder">
+              <div id="PBS" class="carousel" data-carousel>
                 <button
-                  id="carousel-button-previous"
+                  id="carousel-detail-button-prev"
                   class="carousel-button prev"
-                  data-carousel-button="prev"
+                  data-carousel-button="next"
                 >
-                  <img
-                    src="images/wedge-previous.svg"
-                    alt="Button previous project"
-                  />
+                  <img src="images/wedge-previous.svg" alt="Previous project" />
                 </button>
                 <button
-                  id="carousel-button-next"
+                  id="carousel-detail-button-next"
                   class="carousel-button next"
                   data-carousel-button="next"
                 >
-                  <img src="images/wedge-next.svg" alt="Button next project" />
+                  <img src="images/wedge-next.svg" alt="Next project" />
                 </button>
                 <ul data-slides>
                   <li class="slide" data-active>
-                    <button class="project-cards">
-                      <img src="images/portf/PBS 1 A.png" alt="Ukázka 1" />
-                      <h5> ExpoDes for PBS recruitment process </h5>
-                    </button>
+                    <img
+                      class="detail-image"
+                      src="images/portf/PBS 1 A.png"
+                      alt=""
+                    />
                   </li>
                   <li class="slide">
-                    <button class="project-cards">
-                      <img
-                        src="images/portf/JJ-Portf 2025_hlavnijistic.png"
-                        alt="Ukázka 2"
-                      />
-                      <h5> /Logo concept/ for a Punkband </h5>
-                    </button>
+                    <img
+                      class="detail-image"
+                      src="images/portf/PBS 1.png"
+                      alt=""
+                    />
                   </li>
                   <li class="slide">
-                    <button class="project-cards">
-                      <img
-                        src="images/portf/JJ-Portf 2025_mou2.png"
-                        alt="Ukázka 3"
-                      />
-                      <h5>Socks Company /Banner Designs/</h5>
-                    </button>
+                    <img
+                      class="detail-image"
+                      src="images/portf/PBS 2.png"
+                      alt=""
+                    />
                   </li>
                   <li class="slide">
-                    <button class="project-cards">
-                      <img
-                        src="images/portf/JJ-Portf 2025_mou1.png"
-                        alt="Ukázka 4"
-                      />
-                      <h5> Socks Designs /sale + B2B/ </h5>
-                    </button>
+                    <img
+                      class="detail-image"
+                      src="images/portf/PBS 3.png"
+                      alt=""
+                    />
                   </li>
                   <li class="slide">
-                    <button class="project-cards">
-                      <img
-                        src="images/portf/JJ-Portf 2025_jann.png"
-                        alt="Ukázka 5"
-                      />
-                      <h5> Jewelry Brand /Logo/ </h5>
-                    </button>
-                  </li>
-                  <li class="slide">
-                    <button class="project-cards">
-                      <img
-                        src="images/portf/JJ-Portf 2025_zako.png"
-                        alt="Ukázka 5"
-                      />
-                      <h5> Metal Sheets Benders Comp. /Identity Redesign/ </h5>
-                    </button>
-                  </li>
-                  <li class="slide">
-                    <button class="project-cards">
-                      <img
-                        src="images/portf/JJ-Portf 2025_bbf.png"
-                        alt="Ukázka 7"
-                      />
-                      <h5> Bluesband /Visual Identity/ </h5>
-                    </button>
+                    <img
+                      class="detail-image"
+                      src="images/portf/PBS 4.png"
+                      alt=""
+                    />
                   </li>
                 </ul>
               </div>
-            </section>
+              <div id="MOUMOU" class="carousel" data-carousel>
+                <button
+                  id="carousel-detail-button-prev"
+                  class="carousel-button prev"
+                  data-carousel-button="next"
+                >
+                  <img src="images/wedge-previous.svg" alt="Previous project" />
+                </button>
+                <button
+                  id="carousel-detail-button-next"
+                  class="carousel-button next"
+                  data-carousel-button="next"
+                >
+                  <img src="images/wedge-next.svg" alt="Next project" />
+                </button>
+                <ul data-slides>
+                  <li class="slide" data-active>
+                    <img
+                      class="detail-image"
+                      src="images/portf/JJ-Portf 2025_mou1.png"
+                      alt=""
+                    />
+                  </li>
+                  <li class="slide">
+                    <img
+                      class="detail-image"
+                      src="images/portf/JJ-Portf 2025_mou2.png"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
