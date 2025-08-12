@@ -177,6 +177,82 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
 });
 
 //---CAROUSEL---//
+/* --- CAROUSEL PREVIEW --- */
+document.addEventListener("DOMContentLoaded", () => {
+  const ul = document.querySelector(".project-preview-list");
+  const prevBtn = document.getElementById("carousel-preview-button-prev");
+  const nextBtn = document.getElementById("carousel-preview-button-next");
+
+  let currentTranslateX = 0;
+
+  function slide(direction) {
+    const parentWidth = ul.parentElement.offsetWidth;
+    const shift = parentWidth;
+    const style = window.getComputedStyle(ul);
+    const matrix = new WebKitCSSMatrix(style.transform);
+    currentTranslateX = matrix.m41;
+
+    if (isNaN(currentTranslateX)) currentTranslateX = 0;
+
+    if (direction === "next") {
+      currentTranslateX -= shift;
+    } else if (direction === "prev") {
+      currentTranslateX += shift;
+    }
+
+    const totalWidth = ul.scrollWidth;
+
+    if (currentTranslateX > 0) {
+      currentTranslateX = -totalWidth + parentWidth;
+    } else if (currentTranslateX < -totalWidth + parentWidth) {
+      currentTranslateX = 0;
+    }
+
+    ul.style.transform = `translateX(${currentTranslateX}px)`;
+    ul.style.transition = "transform 0.5s ease";
+  }
+
+  prevBtn.addEventListener("click", () => slide("prev"));
+  nextBtn.addEventListener("click", () => slide("next"));
+});
+
+// PŘEPÍNÁNÍ visible místo active
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".project-preview-card").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const isVisible = btn.classList.contains("visible");
+      const clickedId = btn.id; // například "PBS-butt"
+      const detailId = clickedId.replace("-butt", "");
+      const detailDiv = document.getElementById(detailId);
+
+      if (isVisible) {
+        // Pokud je již viditelné, skryj
+        btn.classList.remove("visible");
+        if (detailDiv) {
+          detailDiv.style.display = "none";
+        }
+        document.querySelector(".details-holder").style.display = "none";
+      } else {
+        // Jinak aktivuj a zobraz
+        document
+          .querySelectorAll(".project-preview-card")
+          .forEach((otherBtn) => {
+            otherBtn.classList.remove("visible");
+          });
+        btn.classList.add("visible");
+        document.querySelectorAll(".details-holder > div").forEach((div) => {
+          div.style.display = "none";
+        });
+        if (detailDiv) {
+          detailDiv.style.display = "flex";
+        }
+        document.querySelector(".details-holder").style.display = "flex";
+      }
+    });
+  });
+});
+
+// DETAIL CAROUSEL
 const buttons = document.querySelectorAll("[data-carousel-button]");
 
 buttons.forEach((button) => {
