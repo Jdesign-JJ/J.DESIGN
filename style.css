@@ -264,7 +264,7 @@ h5 {
 
 /*logo*/
 #logoholder {
-  width: 120%;
+  min-width: 26vw;
   z-index: 3;
   display: inline-flex;
 }
@@ -306,9 +306,16 @@ h5 {
 #bio-container {
   display: grid;
   grid-template-rows: auto auto;
-  font-size: 1rem;
   margin: 1rem;
   padding: 1rem;
+}
+
+#bio-container h2 {
+  font-size: 1.5vw;
+}
+
+#bio-container p {
+  font-size: 0.8vw;
 }
 
 #bio-dropdown-button {
