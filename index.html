@@ -9,7 +9,7 @@
     <title>J.design portfolio</title>
   </head>
 
-  <body class="wrap">
+  <body class="wrap dark-mode">
     <div class="mobile-message">
       <h2>
         I don't have mobile version of this page yet (working on it), please use
@@ -17,32 +17,37 @@
       </h2>
       <h3>I'm sorry for this inconvenience, thanks for understanding.</h3>
     </div>
-    <nav class="menu">
+    <nav class="menu dark-mode">
       <div></div>
-      <button id="header-button" class="menu-button">J.DESIGN</button>
-      <button id="projects-button" class="menu-button">Projects</button>
-      <button id="contact-button" class="menu-button">Contact</button>
+      <button id="header-button" class="menu-button dark-mode">J.DESIGN</button>
+      <button id="projects-button" class="menu-button dark-mode">
+        Projects
+      </button>
+      <button id="contact-button" class="menu-button dark-mode">Contact</button>
       <div></div>
     </nav>
     <div class="all-content">
       <div id="skipmenu" class="skip-menu">
         <a href="#maincontent" class="skip-link">skip to content</a>
+        <div class="switcher">
+          <input type="checkbox" id="check" />
+          <label for="check" class="switchbutton dark-mode"> </label>
+        </div>
       </div>
       <div class="scroll-watcher"></div>
-
       <main id="maincontent">
         <div id="header">
           <div></div>
-          <div id="logoholder">
+          <div class="logoholder dark-mode">
             <img src="images/Jdesign logo white.svg" alt="J.design logo" />
           </div>
-          <div id="portraitholder">
+          <div class="portraitholder dark-mode">
             <img id="slideshow-portrait" src="images/Jay.png" alt="Portrait" />
           </div>
           <div id="bio-container">
             <div class="bio-header">
               <h2>bio</h2>
-              <button id="bio-dropdown-button" class="accordion-btn">
+              <button id="bio-dropdown-button" class="accordion-btn dark-mode">
                 <img
                   src="images/wedge-dropdown.svg"
                   alt="wedge-dropdown picto"
@@ -50,7 +55,7 @@
               </button>
             </div>
             <div id="accordion-content" class="accordion-content">
-              <ul id="bio-list">
+              <ul class="bio-list dark-mode">
                 <li class="bio-list-item">
                   <p>
                     Multidisciplinary designer <br />
@@ -95,7 +100,7 @@
             <h2>projects</h2>
             <button
               id="accordion-toggle-button"
-              class="accordion-btn"
+              class="accordion-btn dark-mode"
               aria-expanded="false"
               aria-controls="accordion1-content"
             >
@@ -560,8 +565,7 @@
         </div>
 
         <section id="contact-section">
-          <h2>Do you need me to design something?</h2>
-          <h3>...I mean, anything, really. :D</h3>
+          <h2 id="cont-sec-header">Do you need me to design something?</h2>
           <button
             id="contact-section-button"
             onclick="window.open('mailto:j.design.jurca@gmail.com')"
