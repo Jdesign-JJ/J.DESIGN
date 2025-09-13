@@ -23,6 +23,102 @@ document.addEventListener("DOMContentLoaded", function () {
   checkWidth();
 });
 
+// Posluchač na DARK-LIGHT mode
+document.addEventListener("DOMContentLoaded", () => {
+  const checkbox = document.getElementById("check");
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      document.querySelectorAll(".dark-mode").forEach((el) => {
+        el.classList.remove("dark-mode");
+        el.classList.add("light-mode");
+      });
+    } else {
+      document.querySelectorAll(".light-mode").forEach((el) => {
+        el.classList.remove("light-mode");
+        el.classList.add("dark-mode");
+      });
+    }
+  });
+});
+
+// Posluchač na DARK-LIGHT mode, s přepínáním obrázku
+document.addEventListener("DOMContentLoaded", () => {
+  const checkbox = document.getElementById("check");
+  const logoContainer = document.querySelector(".logoholder img");
+
+  // Při načtení stránky uložíme původní src obrázků, které potřebujeme měnit
+  document.querySelectorAll('img[src^="images/wedge-"]').forEach((img) => {
+    // Uložíme původní src do datasetu, pokud ještě není
+    if (!img.dataset.originalSrc) {
+      img.dataset.originalSrc = img.src;
+    }
+  });
+
+  // Funkce, která podle režimu mění obrázky
+  function updateImages(isLightMode) {
+    // definice obrázků a jejich alternativ
+    const imagesMap = [
+      {
+        selector: 'img[src="images/wedge-dropdown.svg"]',
+        newSrc: "images/wedge-dropdown-b.svg",
+      },
+      {
+        selector: 'img[src="images/wedge-previous.svg"]',
+        newSrc: "images/wedge-previous-b.svg",
+      },
+      {
+        selector: 'img[src="images/wedge-next.svg"]',
+        newSrc: "images/wedge-next-b.svg",
+      },
+    ];
+
+    imagesMap.forEach(({ selector, newSrc }) => {
+      document.querySelectorAll(selector).forEach((img) => {
+        if (isLightMode) {
+          // Pokud je světelný režim, nastavíme "b" verzi
+          img.src = newSrc;
+        } else {
+          // Pokud je tmavý režim, vrátíme původní src
+          if (img.dataset.originalSrc) {
+            img.src = img.dataset.originalSrc;
+          }
+        }
+      });
+    });
+  }
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      // Přepnout na light mode
+      document.querySelectorAll(".dark-mode").forEach((el) => {
+        el.classList.remove("dark-mode");
+        el.classList.add("light-mode");
+      });
+      if (logoContainer) {
+        logoContainer.src = "images/Jdesign logo black.svg";
+      }
+      // aktualizuj obrázky
+      updateImages(true);
+    } else {
+      // Přepnout na dark mode
+      document.querySelectorAll(".light-mode").forEach((el) => {
+        el.classList.remove("light-mode");
+        el.classList.add("dark-mode");
+      });
+      if (logoContainer) {
+        logoContainer.src = "images/Jdesign logo white.svg";
+      }
+      // obnov původní obrázky
+      document.querySelectorAll("img[data-original-src]").forEach((img) => {
+        if (img.dataset.originalSrc) {
+          img.src = img.dataset.originalSrc;
+        }
+      });
+    }
+  });
+});
+
 // --- Funkce na slideshow --- //
 const images = ["images/Jay.png", "images/Jay 1.png", "images/Jay 2.jpg"];
 let currentIndex = 0;
@@ -123,16 +219,19 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
-  const logoHolder = document.getElementById("logoholder");
-  const portraitHolder = document.getElementById("portraitholder");
-  const bioHolder = document.getElementById("bio-container");
+  const logoHolder = document.querySelector(".logoholder");
+  const portraitHolder = document.querySelector(".portraitholder");
+  const bioHolder = document.querySelector(".bio-container");
 
-  // Nejrychleji se pohybuje logo
-  logoHolder.style.transform = `translateY(${scrollY * -1}px)`;
-  // Středně rychle portraitholder
-  portraitHolder.style.transform = `translateY(${scrollY * -0.4}px)`;
-  // Nejpomaleji bioholder
-  bioHolder.style.transform = `translateY(${scrollY * -0.1}px)`;
+  if (logoHolder) {
+    logoHolder.style.transform = `translateY(${scrollY * -1}px)`;
+  }
+  if (portraitHolder) {
+    portraitHolder.style.transform = `translateY(${scrollY * -0.35}px)`;
+  }
+  if (bioHolder) {
+    bioHolder.style.transform = `translateY(${scrollY * -0.1}px)`;
+  }
 });
 
 //---přepínání BIO DROPDOWN ---//
@@ -153,8 +252,10 @@ toggleButton.addEventListener("click", toggleAccordion);
 //header//
 document.querySelectorAll(".accordion-header").forEach((header) => {
   header.addEventListener("click", () => {
-    const toggleBtn = document.getElementById("accordion-toggle-button");
-    toggleBtn.classList.toggle("active");
+    const btn = header.querySelector(".accordion-btn");
+    if (btn) {
+      btn.classList.toggle("active");
+    }
   });
 });
 
